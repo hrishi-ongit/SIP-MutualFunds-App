@@ -28,13 +28,22 @@ form {
   }
   
   input {
-    width: 100%;
+    /* width: 100%;
     padding: 0.5rem;
     border: 1px solid #ffffff5e;
     border-radius: 0.25rem;
     background-color: transparent;
     color: #c2e9e0;
-    font-size: 15px;
+    font-size: 15px; */
+
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid#ecf3f194;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #171719;
+  font-size: 15px;
+
   }
   
   button {
