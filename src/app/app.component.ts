@@ -52,7 +52,6 @@ export class AppComponent {
       });
     }
     console.log('Apps data :', annualData);
-    // this.annualData = annualData;
     this.annualData.set(annualData); //set signal
   }
 }

@@ -20,9 +20,10 @@ export class InvestmentResultsComponent implements OnInit {
 //   totalAmountInvested: number,
 // }[];
 
-@Input() results?: IinvestmentResult[]
+// @Input() results?: IinvestmentResult[]
+
+public results = input<IinvestmentResult[]>()
 
 ngOnInit() : void {
-  console.log(this.results);
 }
 }

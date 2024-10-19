@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        @for (result of results; track $index) {
+        @for (result of results(); track $index) {
             <tr>
                 <td>{{result.year}}</td>
                 <td>{{result.valueEndOfYear | currency : 'INR' : 'symbol-narrow'}}</td>
