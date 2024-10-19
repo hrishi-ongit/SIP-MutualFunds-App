@@ -1,10 +1,10 @@
-header {
+/* header {
     text-align: center;
-    margin: 3rem auto; 
+    margin: 3rem auto;  */
     /* background: linear-gradient(to bottom, #2c0a4c, #450d80); */
-  }
+  /* } */
   
-  header img {
+  /* header img {
     width: 200px;
     height: 200px;
     object-fit: contain;
@@ -13,5 +13,23 @@ header {
   
   header h1 {
     font-size: 35px;
+    color: #ffffff99;
+  } */
+
+  header {
+    text-align: center;
+    margin: 3rem auto;
+    /* background: linear-gradient(to bottom, #2c0a4c, #450d80); */
+  }
+  
+  header img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+    background-color: transparent;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
     color: #ffffff99;
   }

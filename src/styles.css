@@ -1,19 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  /* background: radial-gradient(circle at top, #596b22, #0b0519);  color: #c3b3d8; */
   background: radial-gradient(circle at top, #22406b, #0b0519);
-  /* background: radial-gradient(circle, #596b22, #0b0519); */
 
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh;
+}
+
+.center {
+  text-align: center;
 }

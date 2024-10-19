@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Investment Value</th>
+            <th>Interest (Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (result of results; track $index) {
+            <tr>
+                <td>{{result.year}}</td>
+                <td>{{result.valueEndOfYear | currency : 'INR' : 'symbol-narrow'}}</td>
+                <td>{{result.interest | currency : 'INR' : 'symbol-narrow'}}</td>
+                <td>{{result.totalInterest | currency : 'INR' : 'symbol-narrow'}}</td>
+                <td>{{result.totalAmountInvested | currency : 'INR' : 'symbol-narrow'}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

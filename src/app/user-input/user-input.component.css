@@ -1,14 +1,10 @@
-form {
-    padding: 15px;
-    max-width: 40%;
+  form {
+    padding: 1rem;
+    max-width: 30rem;
     margin: 2rem auto;
     border-radius: 4px;
-    /* background: linear-gradient(180deg, #307e6c, #2b996d);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
-    /* background: linear-gradient(293deg, #2c317d, #939aca);
-    box-shadow: 0 0 10px rgb(158 158 158 / 40); */
-    background: linear-gradient(343deg, #22406b, #595f83);
-    box-shadow: 0 0 10px rgb(158 158 158 / 35%);
+    background: linear-gradient(293deg, #2c317d, #939aca);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
   
   .input-group {
@@ -19,40 +15,32 @@ form {
   
   label {
     display: block;
-    margin-bottom: 5px;
-    color: #e1dadae0;
+    margin-bottom: 0.25rem;
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 11px;
+    font-size: 0.7rem;
     font-weight: bold;
     text-transform: uppercase;
+    color: #191717;
   }
   
   input {
-    /* width: 100%;
+    width: 100%;
     padding: 0.5rem;
     border: 1px solid #ffffff5e;
     border-radius: 0.25rem;
     background-color: transparent;
-    color: #c2e9e0;
-    font-size: 15px; */
-
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid#ecf3f194;
-  border-radius: 0.25rem;
-  background-color: transparent;
-  color: #171719;
-  font-size: 15px;
-
+    color: #f4f6f6;
+    font-size: 1rem;
   }
   
   button {
     width: 100%;
-    padding: 10px;
+    padding: 0.5rem;
     border: 1px solid #2b7cc5;
+
     border-radius: 0.25rem;
     background-color: #226f90;
-    color: #e7eeeb;
+    color: #1a1f1d;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -61,4 +49,5 @@ form {
   
   button:hover {
     background-color:#0d4071;
+
   }

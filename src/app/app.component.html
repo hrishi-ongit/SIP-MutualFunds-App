@@ -1,2 +1,12 @@
 <app-header></app-header>
-<app-user-input></app-user-input>
+<app-user-input (calculateData)="calculateInvestmentResults($event)"></app-user-input>
+<!-- <app-investment-results [results]="annualData"/> -->
+<!-- Reading/Passing signal -->
+
+@if (!annualData()) {
+<p id="calculate-text" >Please enter some value and calculate on "Calculate"</p>
+<!-- or style text-align center -->
+}
+@else {
+<app-investment-results [results]="annualData()" />
+}
