@@ -4,6 +4,7 @@ import { HeaderComponent } from "./header/header.component";
 import { UserInputComponent } from "./user-input/user-input.component";
 import { InvestmentResultsComponent } from "./investment-results/investment-results.component";
 import { Iinvestmentinput, IinvestmentResult } from './investment.interface';
+import { InvestmentService } from './shared/investment.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -12,6 +13,8 @@ import { Iinvestmentinput, IinvestmentResult } from './investment.interface';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  constructor(private _investmentService: InvestmentService){}
   title = 'SipMutualfundsApp';
   // public annualData: {}[] = [];
   // public annualData?: {
@@ -24,34 +27,11 @@ export class AppComponent {
   // }[];
 
   //normal :
-  // public annualData: IinvestmentResult[] = [];
+  public annualData: IinvestmentResult[] = [];
   //sigal :
-  public annualData = signal<IinvestmentResult[] | undefined>(undefined)
+  // public annualData = signal<IinvestmentResult[] | undefined>(undefined)
 
-  calculateInvestmentResults(data: Iinvestmentinput) {
-    const annualData: IinvestmentResult[] = [];
-
-    //javascript destructuring
-    const {initialInvestment, duration, expectedReturn, annualInvestment} = data;
-
-    let investmentValue = initialInvestment;
-  
-    for (let i = 0; i < duration; i++) {
-      const year = i + 1;
-      const interestEarnedInYear = investmentValue * (expectedReturn / 100);
-      investmentValue += interestEarnedInYear + annualInvestment;
-      const totalInterest =
-        investmentValue - annualInvestment * year - initialInvestment;
-      annualData.push({
-        year: year,
-        interest: interestEarnedInYear,
-        valueEndOfYear: investmentValue,
-        annualInvestment: annualInvestment,
-        totalInterest: totalInterest,
-        totalAmountInvested: initialInvestment + annualInvestment * year,
-      });
-    }
-    console.log('Apps data :', annualData);
-    this.annualData.set(annualData); //set signal
+  calculateInvestmentResults(data: Iinvestmentinput): void {
+    this.annualData = this._investmentService.calculateInvestmentResults(data);
   }
 }
